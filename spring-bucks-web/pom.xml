@@ -20,6 +20,11 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -39,12 +44,6 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-actuator</artifactId>
-                </dependency>
-            </dependencies>
         </profile>
         <profile>
             <id>prod</id>
@@ -62,14 +61,14 @@
                 <filtering>true</filtering>
                 <directory>${basedir}/src/main/resources</directory>
                 <includes>
-                    <include>**/application.yaml</include>
-                    <include>**/application-${active.profile}.yaml</include>
+                    <include>application.yaml</include>
+                    <include>application-${active.profile}.yaml</include>
                 </includes>
             </resource>
             <resource>
                 <directory>${basedir}/src/main/resources</directory>
                 <excludes>
-                    <exclude>**/application*.yaml</exclude>
+                    <exclude>application*.yaml</exclude>
                 </excludes>
             </resource>
         </resources>
