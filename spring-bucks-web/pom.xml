@@ -44,6 +44,13 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
         </profile>
         <profile>
             <id>prod</id>
@@ -57,6 +64,9 @@
         <finalName>spring-bucks</finalName>
 
         <resources>
+            <resource>
+                <directory>${basedir}/src/main/scripts</directory>
+            </resource>
             <resource>
                 <filtering>true</filtering>
                 <directory>${basedir}/src/main/resources</directory>

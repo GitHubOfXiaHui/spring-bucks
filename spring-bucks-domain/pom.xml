@@ -13,6 +13,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>edu.bupt.xiahui</groupId>
             <artifactId>spring-bucks-common</artifactId>
         </dependency>
